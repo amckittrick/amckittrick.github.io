@@ -126,7 +126,8 @@ footer li img:hover {
   backface-visibility: hidden;
 }
 
-.hovereffect:hover img {
+.hovereffect:hover img,
+.hovereffect:focus img {
   opacity: 0.4;
   filter: alpha(opacity=40);
   -webkit-transform: translate3d(0,0,0);
@@ -176,7 +177,8 @@ footer li img:hover {
   transform: translate3d(100%,0,0);
 }
 
-.hovereffect:hover a, .hovereffect:hover p {
+.hovereffect:hover a, .hovereffect:hover p,
+.hovereffect:focus a, .hovereffect:focus p {
   opacity: 1;
   filter: alpha(opacity=100);
   -webkit-transform: translate3d(0,0,0);
