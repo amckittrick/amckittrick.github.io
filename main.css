@@ -271,7 +271,7 @@ footer li img:hover {
     }
 
     header a {
-      padding: 0 5px;
+      padding: 0 10px;
     }
 
     h4 {
@@ -279,6 +279,6 @@ footer li img:hover {
     }
 
     h1 {
-      font-size: 28px;
+      font-size: 20px;
     }
 }
