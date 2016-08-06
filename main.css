@@ -269,4 +269,16 @@ footer li img:hover {
     .modal-content {
         width: 100%;
     }
+
+    header a {
+      padding: 0 5px;
+    }
+
+    h4 {
+      font-size: 15px;
+    }
+
+    h1 {
+      font-size: 28px;
+    }
 }
