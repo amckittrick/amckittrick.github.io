@@ -269,7 +269,9 @@ footer li img:hover {
     .modal-content {
         width: 100%;
     }
+}
 
+@media only screen and (max-device-width : 568px){
     header a {
       padding: 0 10px;
     }
