@@ -126,8 +126,7 @@ footer li img:hover {
   backface-visibility: hidden;
 }
 
-.hovereffect:hover img,
-.hovereffect:focus img {
+.hovereffect:hover img {
   opacity: 0.4;
   filter: alpha(opacity=40);
   -webkit-transform: translate3d(0,0,0);
@@ -177,8 +176,7 @@ footer li img:hover {
   transform: translate3d(100%,0,0);
 }
 
-.hovereffect:hover a, .hovereffect:hover p,
-.hovereffect:focus a, .hovereffect:focus p {
+.hovereffect:hover a, .hovereffect:hover p{
   opacity: 1;
   filter: alpha(opacity=100);
   -webkit-transform: translate3d(0,0,0);
@@ -186,30 +184,12 @@ footer li img:hover {
 }
 
 /* Style the Image Used to Trigger the Modal */
-#myImg1,
-#myImg2,
-#myImg3,
-#myImg4,
-#myImg5,
-#myImg6,
-#myImg7,
-#myImg8,
-#myImg9,
-#myImg10 {
-    cursor: pointer;
-    transition: 0.3s;
+*[id^='myImg'] {
+  cursor: pointer;
+  transition: : 0.3s;
 }
 
-#myImg1:hover,
-#myImg2:hover,
-#myImg3:hover,
-#myImg4:hover,
-#myImg5:hover,
-#myImg6:hover,
-#myImg7:hover,
-#myImg8:hover,
-#myImg9:hover,
-#myImg10:hover {
+*[id^='myImg']:hover {
   opacity: 0.7;
 }
 
