@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html manifest="amckittrick.appcache">
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Andrew McKittrick</title>
+  <meta charset='utf-8'/>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css' integrity='sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7' crossorigin='anonymous'>
+  <link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300,200' rel='stylesheet' type='text/css'>
+  <link rel='stylesheet' type='text/css' href='main.css'>
+  <style type='text/css'>
+   body { background: #d9d9d9 !important; } /* Adding !important forces the browser to overwrite the default style applied by Bootstrap */
+  </style>
+</head>
+<body>
+	<header class ='container'>
+  	<div class='row'>
+      <h1 class='col-sm-4'><a href='index.html'>Andrew E. McKittrick</a></h1>
+      <nav class='col-sm-8 text-right'>
+      	<h4><a href='contact.html'>Contact</a></h4>
+        <h4><a href='https://github.com/amckittrick'>Github</a></h4>
+        <h4><a href='resume.html'>Resume</a></h4>
+      </nav>
+    </div>
+  </header>
+  <section class='container'>
+    <div class='row'>
+      <div class='col-md-12 text-center'>
+        <h1>Health Monitor</h1>
+      </div>
+    </div>
+  	<div class='row'>
+      <div class='col-md-12'>
+        <p> As I was biking in the heat one day, I began to contemplate and think about the current health monitoring solutions on the market.
+          My original idea was wondering whether the hyrdation level of an athlete could be calculated or estimated based upon the voltage across their
+          skin. My idea behind this was that various types of sweat may conduct differeent voltages. This could correspond and be correlated to
+          different hydration levels based upon the content of the sweat. I continued to ponder this question over the next couple of days and then decided
+          to turn it into a personal project. My vision was for the following: a miniature wearable sized arduino would be connected to a series of
+          thermometers, heart rate monitors (HRM) and possibly voltage meters. This information from the array of sensors would then be broadcast over
+          Bluetooth Low Energy (BLE) and read through an iPhone application. The iPhone application would then take in this information, compare it across
+          scales and other outside information such as temperature, humidity etc. Finally, all of this information would be run through an algorithm
+          to determine the fitness level and health of an athlete. This information could be used to provide warning informatinon through audible sounds in order to
+          warn the athlete if they are getting close to an injury or heat exhaustion.
+        </p>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-md-12'>
+        <img class='img-responsive' src='/Assets/Images/monitor/board.jpg' alt=''>
+      </div>
+    </div>
+    <div class='row'>
+      <div class='col-md-12'>
+        <p> I researched the parts and ordered them. For the microcontroller, I ordered the <a href='https://www.adafruit.com/products/2829'> Adafruit Feather 32u4 Bluefruit LE </a>.
+          I decided to combine this with an array of <a href='https://www.adafruit.com/products/1782'> temperature breakout boards </a> also from Adafruit. I would then follow a
+          <a href='http://www.instructables.com/id/Simple-DIY-Pulse-Sensor'> guide </a> to build my HRM. I was lucky enough to find example code from
+          <a href='https://github.com/adafruit/Adafruit_BluefruitLE_nRF51'> Adafruit </a> for connecting an iPHone application and sending HRM and thermometer information over BLE.
+          I have been able to combine these two sketches to form one program that advertises both sets of information at the same time. The code can be found on
+          <a href='https://github.com/amckittrick/arduino-health-monitor'> GitHub </a>. An issue that I ran into is that the BLE for the thermometer uses the
+          GATT standard and is struggling to transmit any decimals. At this point, I round the float temperature reading to the nearest
+          whole value and then convert this to an int and transmit it. I am currently working on wiring the custom HRM and then will port the code over so that instead of
+          transmitting a random value, it can actually read the correct value. My future plans for the project are the following:
+        </p>
+        <ul>
+          <li><p>Finish wiring the HRM</p></li>
+          <li><p>Add code to read and transmit the HRM data</p></li>
+          <li><p>Using the code found <a href='https://github.com/NordicSemiconductor/IOS-nRF-Toolbox'> here </a>, write a custom iPHone application</p></li>
+          <li><p>Design and construct an alogrithm for testing the health of the wearer</p></li>
+          <li><p>Research the correlation between skin voltage and hydration levels</p></li>
+          <li><p>Design custom PCB for project</p></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <footer class='container'>
+  	<div class='row'>
+      <p class='col-sm-4'>&copy; Copyright 2016 Andrew McKittrick</p>
+      <ul class='col-sm-8'>
+        <li class='col-sm-1'>
+          <a href='https://twitter.com/amckit'>
+        	 <img src='/Assets/Images/twitter.png'>
+          </a>
+        </li>
+        <li class='col-sm-1'>
+        	<a href='https://www.facebook.com/andrew.mckittrick.5'>
+           <img src='/Assets/Images/facebook.png'>
+          </a>
+        </li>
+        <li class='col-sm-1'>
+        	<a href='https://www.linkedin.com/in/andrew-mckittrick-943271103'>
+           <img src='/Assets/Images/in.png'>
+          </a>
+        </li>
+        <li class='col-sm-1'>
+        	<a href='https://github.com/amckittrick'>
+           <img src='/Assets/Images/github.png'>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
